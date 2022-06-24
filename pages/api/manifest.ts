@@ -18,7 +18,7 @@ const handler: Handler = async (request) => {
   );
 
   const manifest = {
-    id: "saleor.app",
+    id: "saleor.testing.dashboard-extensions",
     version: version,
     name: name,
     permissions: ["MANAGE_ORDERS", "MANAGE_PRODUCTS"],
@@ -38,15 +38,15 @@ const handler: Handler = async (request) => {
         mount: "PRODUCT_DETAILS_MORE_ACTIONS",
         target: "APP_PAGE",
         permissions: ["MANAGE_PRODUCTS"],
-        url: "/product_details"
+        url: "/product_details",
       },
       {
         label: "Order details action",
         mount: "ORDER_DETAILS_MORE_ACTIONS",
         target: "APP_PAGE",
         permissions: ["MANAGE_ORDERS"],
-        url: '/order_details'
-      }
+        url: "/order_details",
+      },
     ],
   };
 
